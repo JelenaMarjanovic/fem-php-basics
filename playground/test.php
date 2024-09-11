@@ -1,7 +1,15 @@
-Hello World!
 <?php
-echo "Hello World!";
-// echo("Hello World!");
-?>
+$name = "Max";
+echo $name;
+echo "\n";
+$name = 4;
+echo $name;
+echo "\n";
 
-Is this still alive?
+$year = 2025;
+$isFinished = true;
+// $isFinished = TRUE;
+$vName = "course";
+$$vName = "PHP Fundamentals";
+
+echo $course;
