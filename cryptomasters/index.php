@@ -12,7 +12,7 @@
 
   <p>Enter the amount of crypto</p>
 
-  <form action="convert.php">
+  <form action="convert.php" method="post">
     <label for="amount">Amount</label>
     <input id="amount" name="amount">
 
