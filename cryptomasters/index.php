@@ -12,12 +12,12 @@
 
   <p>Enter the amount of crypto</p>
 
-  <form>
+  <form action="convert.php">
     <label for="amount">Amount</label>
-    <input id="amount">
+    <input id="amount" name="amount">
 
     <label for="crypto">Cryptocurrency</label>
-    <select id="crypto">
+    <select id="crypto" name="crypto">
       <option>BTC</option>
       <option>ETH</option>
     </select>
