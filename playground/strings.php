@@ -57,3 +57,7 @@ $year = 2024;
 
 $message3 = 'Welcome to the future, it\'s a year: ' . ($year + 1);
 echo $message3;
+
+echo "\n";
+
+echo 'The length of the string $title is: ' . strlen($title) . ' characters';
