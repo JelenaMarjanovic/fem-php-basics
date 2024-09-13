@@ -17,5 +17,3 @@ class CryptoConverter
   // methods
   public function convert(float $value): void {}
 }
-
-$c = new CryptoConverter(currencyCode: 'BTC');
