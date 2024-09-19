@@ -32,7 +32,11 @@ require_once "classes/converter.php";
     $amount = $_POST['amount'];
     $crypto = $_POST['crypto'];
 
+    $converter = new CryptoConverter($crypto);
+    $result = $converter->convert($amount);
+
     echo "<p>You want to convert $amount $crypto.</p>";
+    echo "<h2>You have USD $result</h2>";
   } else {
     echo "<p>Ops! Something went wrong. Please, go back to form and try again.</p>";
   }
