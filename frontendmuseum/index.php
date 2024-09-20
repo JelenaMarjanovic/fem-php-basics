@@ -34,8 +34,8 @@
   </h1>
   <main>
     <?php
-    $json = file_get_contents('data/data.json');
-    $exhibits = json_decode($json);
+    $db = new DB();
+    $exhibits = $db->execute('SELECT * FROM exhibits');
 
     foreach ($exhibits as $exhibit):
     ?>
