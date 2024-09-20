@@ -34,6 +34,7 @@
   </h1>
   <main>
     <?php
+    include("classes.php");
     $db = new DB();
     $exhibits = $db->execute('SELECT * FROM exhibits');
 
