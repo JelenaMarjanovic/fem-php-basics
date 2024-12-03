@@ -1,57 +1,13 @@
-<!DOCTYPE html>
+<?php include "header_inc.php" ?>
+<ul>
+  <?php
+  include("classes.php");
+  $db = new DB();
+  $exhibits = $db->execute('SELECT * FROM exhibits');
 
-<html lang="en">
-
-<head>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="background.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=optional"
-    rel="stylesheet" />
-
-  <link
-    rel="preload"
-    href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeAZ9hiJ-Ek-_EeA.woff2"
-    as="font"
-    fetchpriority="high" />
-
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frontend Museum</title>
-</head>
-
-<body>
-  <h1>
-    <img
-      src="images/logo.png"
-      alt="Frontend Masters Museum"
-      width="300"
-      fetchpriority="high" />
-  </h1>
-  <main>
-    <?php
-    include("classes.php");
-    $db = new DB();
-    $exhibits = $db->execute('SELECT * FROM exhibits');
-
-    foreach ($exhibits as $exhibit):
-    ?>
-      <article>
-        <h2><?= $exhibit['title'] ?></h2>
-        <p>
-          <?= $exhibit['description'] ?>
-        </p>
-        <img
-          src="gallery/<?= $exhibit['image'] ?>"
-          fetchpriority="high"
-          decoding="sync" />
-      </article>
-    <?php endforeach; ?>
-  </main>
-</body>
-
-</html>
+  foreach ($exhibits as $exhibit):
+  ?>
+    <li></li>
+  <?php endforeach; ?>
+</ul>
+<?php include "footer_inc.php" ?>
