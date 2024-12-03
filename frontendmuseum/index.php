@@ -5,9 +5,9 @@
   $db = new DB();
   $exhibits = $db->execute('SELECT * FROM exhibits');
 
-  foreach ($exhibits as $i => $exhibit):
+  foreach ($exhibits as $exhibit):
   ?>
-    <li><a href="details.php?index=<?= $i ?>">
+    <li><a href="details.php?index=<?= $exhibit['id'] - 1 ?>">
         <?= $exhibit['title'] ?>
       </a>
     </li>
